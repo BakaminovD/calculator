@@ -33,7 +33,7 @@ class MainApp(App):
 
 		ver_dop=BoxLayout(orientation='vertical')
 		
-		self.lbl_primer = Label(text='')
+		self.lbl_primer = Label(text='x + y = й')
 		ver_dop.add_widget(self.lbl_primer)
 		
 		ver2=BoxLayout(orientation='vertical')
@@ -43,10 +43,10 @@ class MainApp(App):
 
 		ver3=BoxLayout(orientation='horizontal')
 
-		self.lbl_10ss_dop = Label(text='x[sub]10[/sub]:', size_hint = (.1, 1), markup=True)
+		self.lbl_10ss_dop = Label(text='x[sub]10[/sub]:', size_hint = (.1, 1), color = (.95, .78, .14, 1), markup=True)
 		ver3.add_widget(self.lbl_10ss_dop)
 		
-		self.lbl_10ss = Label(text='')
+		self.lbl_10ss = Label(text='', color = (.95, .78, .14, 1))
 		ver3.add_widget(self.lbl_10ss)
 
 		ver4=BoxLayout(orientation='horizontal')
@@ -226,6 +226,12 @@ class MainApp(App):
 	def pres_x10(self, btn_x10):
 		self.flag = 10
 		self.flag_rezult = 0
+		self.lbl_10ss.color = (.95, .78, .14, 1)
+		self.lbl_10ss_dop.color = (.95, .78, .14, 1) 
+		self.lbl_16ss.color = (1, 1, 1, 1)
+		self.lbl_16ss_dop.color = (1, 1, 1, 1)
+		self.lbl_2ss.color = (1, 1, 1, 1)
+		self.lbl_2ss_dop.color = (1, 1, 1, 1)
 		self.btn_x10.color = (.95, .78, .14, 1)
 		self.btn_x16.color = (1, 1, 1, 1)
 		self.btn_x2.color = (1, 1, 1, 1)
@@ -244,7 +250,7 @@ class MainApp(App):
 		self.btn_E.disabled = True
 		self.btn_F.disabled = True
 		self.btn_toch.disabled = False
-		self.lbl_primer.text = ''
+		self.lbl_primer.text = 'x + y = й'
 		self.lbl_2ss.text = ''
 		self.lbl_16ss.text = ''
 		self.lbl_10ss.text = ''
@@ -253,6 +259,12 @@ class MainApp(App):
 	def pres_x16(self, btn_x16):
 		self.flag_rezult = 0
 		self.flag = 16
+		self.lbl_10ss.color = (1, 1, 1, 1)
+		self.lbl_10ss_dop.color = (1, 1, 1, 1) 
+		self.lbl_16ss.color = (.95, .78, .14, 1)
+		self.lbl_16ss_dop.color = (.95, .78, .14, 1)
+		self.lbl_2ss.color = (1, 1, 1, 1)
+		self.lbl_2ss_dop.color = (1, 1, 1, 1)
 		self.btn_x10.color = (1, 1, 1, 1)
 		self.btn_x16.color = (.95, .78, .14, 1)
 		self.btn_x2.color = (1, 1, 1, 1)
@@ -271,7 +283,7 @@ class MainApp(App):
 		self.btn_E.disabled = False
 		self.btn_F.disabled = False
 		self.btn_toch.disabled = False
-		self.lbl_primer.text = ''
+		self.lbl_primer.text = 'x + y = й'
 		self.lbl_2ss.text = ''
 		self.lbl_16ss.text = ''
 		self.lbl_10ss.text = ''
@@ -280,6 +292,12 @@ class MainApp(App):
 	def pres_x2(self, btn_x2):
 		self.flag_rezult = 0
 		self.flag = 2
+		self.lbl_10ss.color = (1, 1, 1, 1)
+		self.lbl_10ss_dop.color = (1, 1, 1, 1) 
+		self.lbl_16ss.color = (1, 1, 1, 1)
+		self.lbl_16ss_dop.color = (1, 1, 1, 1)
+		self.lbl_2ss.color = (.95, .78, .14, 1)
+		self.lbl_2ss_dop.color = (.95, .78, .14, 1)
 		self.btn_x10.color = (1, 1, 1, 1)
 		self.btn_x16.color = (1, 1, 1, 1)
 		self.btn_x2.color = (.95, .78, .14, 1)
@@ -298,7 +316,7 @@ class MainApp(App):
 		self.btn_E.disabled = True
 		self.btn_F.disabled = True
 		self.btn_toch.disabled = False
-		self.lbl_primer.text = ''
+		self.lbl_primer.text = 'x + y = й'
 		self.lbl_2ss.text = ''
 		self.lbl_16ss.text = ''
 		self.lbl_10ss.text = ''
@@ -329,7 +347,7 @@ class MainApp(App):
 			
 	def pres_ochist(self, btn_ochist):
 		self.flag_rezult = 0
-		self.lbl_primer.text = ''
+		self.lbl_primer.text = 'x + y = й'
 		self.lbl_2ss.text = ''
 		self.lbl_16ss.text = ''
 		self.lbl_10ss.text = ''
@@ -358,7 +376,7 @@ class MainApp(App):
 		if self.flag_rezult == 1:
 			self.flag_rezult = 0
 			self.lbl_rezult.text = '('
-			self.lbl_primer.text = ''
+			self.lbl_primer.text = 'x + y = й'
 			self.lbl_10ss.text = ''
 			self.lbl_16ss.text = ''
 			self.lbl_2ss.text = ''
@@ -393,7 +411,7 @@ class MainApp(App):
 	def pres_delit(self, btn_delit):
 		self.flag_rezult = 0
 		if self.lbl_rezult.text == '0':
-			self.lbl_primer.text = ''
+			self.lbl_primer.text = 'x + y = й'
 			self.lbl_2ss.text = ''
 			self.lbl_16ss.text = ''
 			self.lbl_rezult.text = '0'
@@ -405,7 +423,7 @@ class MainApp(App):
 			popup = Popup(title='ОшибочкА', content=layout, size_hint = (1, .4))
 			button.bind(on_press = popup.dismiss)
 			self.lbl_rezult.text = '0'
-			self.lbl_primer.text = ''
+			self.lbl_primer.text = 'x + y = й'
 			self.lbl_10ss.text = ''
 			self.lbl_16ss.text = ''
 			self.lbl_2ss.text = ''
@@ -459,7 +477,7 @@ class MainApp(App):
 			popup = Popup(title='ОшибочкА', content=layout, size_hint = (1, .4))
 			button.bind(on_press = popup.dismiss)
 			self.lbl_rezult.text = '0'
-			self.lbl_primer.text = ''
+			self.lbl_primer.text = 'x + y = й'
 			self.lbl_10ss.text = ''
 			self.lbl_16ss.text = ''
 			self.lbl_2ss.text = ''
