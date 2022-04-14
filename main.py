@@ -463,6 +463,7 @@ class MainApp(App):
 		self.flag_rezult = 1
 		my_primer = self.lbl_rezult.text
 		self.rez = my_primer
+		self.rez = self.rez.replace(' ', '')
 		if self.flag == 16:
 			self.rez = summary(self.rez, from_base=16)
 		elif self.flag == 2:
